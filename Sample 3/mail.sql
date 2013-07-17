@@ -145,8 +145,8 @@ CREATE TABLE IF NOT EXISTS `userdata` (
 --
 
 INSERT INTO `userdata` (`IdRecipient`, `name`, `surname`, `display`, `emailaddress`, `age`, `idCity`, `optin`, `optOut`, `note`, `enabled`, `insertData`, `updateData`) VALUES
-(1, 'dj', 'dc', 'dd', 'sijanzafeer@gmail.com', '20', '2', '', '', '', '', '', ''),
-(2, 'aj', 'ac', 'aa', 'ishthi83@gmail.com', '20', '2', '', '', '', '', '', '');
+(1, 'dj', 'dc', 'dd', '', '20', '2', '', '', '', '', '', ''),
+(2, 'aj', 'ac', 'aa', '', '20', '2', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 

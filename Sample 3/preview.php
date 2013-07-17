@@ -14,7 +14,7 @@ while($row = mysql_fetch_assoc($data)){
 		$email = $row['emailaddress'];
 				 
 		$to = $email; // to address 
-		$from= "s20341_17@in.smtpok.com"; // from address
+		$from= ""; // from address
 		$from_name= "Last Name"; // name of the sender
 		$subject= "HTML TEST"; // Subjectcon
 		$body= "attachment/contents.html"; // the html page nae
