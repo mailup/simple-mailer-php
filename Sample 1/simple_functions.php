@@ -15,13 +15,13 @@ function smtpmailer($to, $from, $from_name, $subject, $body) {
     $mail->IsSMTP(); // telling the class to use SMTP
 
     try {
-      $mail->Host       = "in.smtpok.com"; // SMTP server
+      $mail->Host       = ""; // SMTP server
       $mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
       $mail->SMTPAuth   = true;                  // enable SMTP authentication
-      $mail->Host       = "in.smtpok.com"; // sets the SMTP server
+      $mail->Host       = ""; // sets the SMTP server
       $mail->Port       = 25;                    // set the SMTP port for the GMAIL server
-      $mail->Username   = "s20341_17"; // SMTP account username
-      $mail->Password   = "pGdLR.fFtW";        // SMTP account password
+      $mail->Username   = ""; // SMTP account username
+      $mail->Password   = "";        // SMTP account password
       $mail->AddAddress($to); // To address
       $mail->SetFrom($from, $from_name); // From address
       $mail->AddReplyTo($from, $from_name); // Adress to be replied
