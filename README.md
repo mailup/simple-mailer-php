@@ -1,6 +1,6 @@
 Simple SMTP+ Implementation samples ( work in progress )
 ------------------------
-A very short list of readymade SMPT+ implementation samples.
+A very short list of readymade SMTP+ implementation samples.
 The samples contained in this repository are based on easy-to-handle scenarios and suggest some possible implementation approaches.
 
 Each sample, easily downloadable as a standalone netbeans project, will make use of different features/abilities of MailUp SMTP+ service.
