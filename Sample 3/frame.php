@@ -1,1 +1,0 @@
-<iframe name="theFrame" src="attachment/contents.html" style="width:50% ; height:50%;"></iframe>
