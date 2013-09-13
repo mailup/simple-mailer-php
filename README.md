@@ -36,7 +36,7 @@ Samples overview
 * Sample 5  : Uploading recipients' information and email message from file. ( suggested for those who need to send a message starting from an HTML message and a CSV/XLS file containing the list of recipients  )
 * Sample 6  : Uploading an Email message as zip archive and send it to MailUp console ( suggested for those yet to be acquainted with MailUp Web interface and for those who are willing to simplify the upload to Mailup of either HTML message and related images).
 * Sample 7  : Sending customized email messages ( suggested if you rely on smtp+ service but still need to nest customized content in the markup ).
-* Sample 8  : A complete sample enclosing all of the above features 
+
 
 Installation
 ------------------------
