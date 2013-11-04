@@ -1,0 +1,239 @@
+CREATE DATABASE  IF NOT EXISTS `sample` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `sample`;
+-- MySQL dump 10.13  Distrib 5.6.11, for Win32 (x86)
+--
+-- Host: 127.0.0.1    Database: sample
+-- ------------------------------------------------------
+-- Server version	5.6.12-log
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `group`
+--
+
+DROP TABLE IF EXISTS `group`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `group` (
+  `IdGroup` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `insertDate` varchar(100) NOT NULL,
+  `updateDate` varchar(100) NOT NULL,
+  PRIMARY KEY (`IdGroup`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `group`
+--
+
+LOCK TABLES `group` WRITE;
+/*!40000 ALTER TABLE `group` DISABLE KEYS */;
+/*!40000 ALTER TABLE `group` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `interest`
+--
+
+DROP TABLE IF EXISTS `interest`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `interest` (
+  `interest` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(100) NOT NULL,
+  `InsertDate` varchar(100) NOT NULL,
+  `UpdateDate` varchar(100) NOT NULL,
+  PRIMARY KEY (`interest`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `interest`
+--
+
+LOCK TABLES `interest` WRITE;
+/*!40000 ALTER TABLE `interest` DISABLE KEYS */;
+INSERT INTO `interest` VALUES (1,'Sport','2013-08-01','2013-08-01'),(2,'Hotel','2013-08-01','2013-08-01'),(3,'Reading\r\n','2013-08-01','2013-08-01');
+/*!40000 ALTER TABLE `interest` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `location`
+--
+
+DROP TABLE IF EXISTS `location`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `location` (
+  `idCity` int(11) NOT NULL AUTO_INCREMENT,
+  `state` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `insertDate` varchar(100) NOT NULL,
+  `updateDate` varchar(100) NOT NULL,
+  `url` text NOT NULL,
+  PRIMARY KEY (`idCity`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `location`
+--
+
+LOCK TABLES `location` WRITE;
+/*!40000 ALTER TABLE `location` DISABLE KEYS */;
+INSERT INTO `location` VALUES (1,'New York','New York City','2013-08-01','2013-08-01','http://www.yellowpages.com/new-york-ny'),(2,'Florida','Miami','2013-08-01','2013-08-01','http://www.yellowpages.com/miami-fl'),(3,'Pennsylvania','Philadelphia','2013-08-01','2013-08-01','http://www.yellowpages.com/philadelphia-pa');
+/*!40000 ALTER TABLE `location` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `user-interest`
+--
+
+DROP TABLE IF EXISTS `user-interest`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `user-interest` (
+  `interest` int(11) NOT NULL,
+  `idRecipient` int(11) NOT NULL,
+  `score` varchar(100) NOT NULL,
+  `insertDate` varchar(100) NOT NULL,
+  `updateDate` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `user-interest`
+--
+
+LOCK TABLES `user-interest` WRITE;
+/*!40000 ALTER TABLE `user-interest` DISABLE KEYS */;
+INSERT INTO `user-interest` VALUES 
+(1,1,'','2013-08-01','2013-08-01'),
+(2,1,'','2013-08-01','2013-08-01'),
+(3,2,'','2013-08-01','2013-08-01'),
+(1,2,'','2013-08-01','2013-08-01'),
+(2,2,'','2013-08-01','2013-08-01'),
+(2,3,'','2013-08-01','2013-08-01'),
+(3,3,'','2013-08-01','2013-08-01'),
+(1,4,'','2013-08-01','2013-08-01'),
+(2,4,'','2013-08-01','2013-08-01'),
+(1,5,'','2013-08-01','2013-08-01'),
+(2,5,'','2013-08-01','2013-08-01'),
+(3,5,'','2013-08-01','2013-08-01'),
+(1,6,'','2013-08-01','2013-08-01'),
+(3,6,'','2013-08-01','2013-08-01'),
+(1,7,'','2013-08-01','2013-08-01'),
+(2,7,'','2013-08-01','2013-08-01'),
+(3,7,'','2013-08-01','2013-08-01'),
+(1,8,'','2013-08-01','2013-08-01'),
+(3,8,'','2013-08-01','2013-08-01'),
+(1,9,'','2013-08-01','2013-08-01'),
+(3,9,'','2013-08-01','2013-08-01'),
+(1,10,'','2013-08-01','2013-08-01'),
+(2,10,'','2013-08-01','2013-08-01'),
+(3,10,'','2013-08-01','2013-08-01'),
+(2,11,'','2013-08-01','2013-08-01'),
+(1,12,'','2013-08-01','2013-08-01'),
+(3,12,'','2013-08-01','2013-08-01'),
+(2,13,'','2013-08-01','2013-08-01'),
+(3,14,'','2013-08-01','2013-08-01');
+
+/*!40000 ALTER TABLE `user-interest` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `userdata`
+--
+
+DROP TABLE IF EXISTS `userdata`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `userdata` (
+  `IdRecipient` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `surname` varchar(100) NOT NULL,
+  `display` varchar(100) NOT NULL,
+  `emailaddress` varchar(100) NOT NULL,
+  `age` varchar(100) NOT NULL,
+  `idCity` varchar(100) NOT NULL,
+  `optin` varchar(100) NOT NULL,
+  `optOut` varchar(100) NOT NULL,
+  `note` varchar(500) NOT NULL,
+  `enabled` varchar(100) NOT NULL,
+  `insertData` varchar(100) NOT NULL,
+  `updateData` varchar(100) NOT NULL,
+  PRIMARY KEY (`IdRecipient`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `userdata`
+--
+
+LOCK TABLES `userdata` WRITE;
+/*!40000 ALTER TABLE `userdata` DISABLE KEYS */;
+INSERT INTO `userdata` VALUES 
+(1,'Daniella','Ingalls','Daniella Ingalls','Daniella@domain_test.com','22','2','1','0','-','1','2013-08-01','2013-08-01'),
+(2,'Marco','Biller','Marco Biller','marco@domain_test.com','25','2','1','0','-','1','2013-08-01','2013-08-01'),
+(3,'Ginny','Mantz','Ginny Mantz','ginni@domain_test.com','33','1','1','0','-','1','2013-08-01','2013-08-01'),
+(4,'Beth','Wilbur','Beth Wilbur','beth@domain_test.com','31','3','1','0','-','1','2013-08-01','2013-08-01'),
+(5,'Glenda','Moone','Glenda Moone','glenda@domain_test.com','34','2','1','0','-','1','2013-08-01','2013-08-01'),
+(6,'Fidela','Schilling','Fidela Schilling','fidela@domain_test.com','43','3','1','0','-','1','2013-08-01','2013-08-01'),
+(7,'Ernestina','Sias','Ernestina Sias','ernestina@domain_test.com','42','1','1','0','-','1','2013-08-01','2013-08-01'),
+(8,'Kathi','Mullaney','Kathi Mullaney','kathi@domain_test.com','40','3','1','0','-','1','2013-08-01','2013-08-01'),
+(9,'Marco','Kall','Marco Kall','marco@domain_test.com','41','1','1','0','-','1','2013-08-01','2013-08-01'),
+(10,'Tod','Pulmador','Tod Pulmador','tod@domain_test.com','59','1','1','0','-','1','2013-08-01','2013-08-01'),
+(11,'Dallas','Fulbright','Dallas Fulbright','dallas@domain_test.com','55','1','1','0','-','1','2013-08-01','2013-08-01'),
+(12,'Ernie','Gregerson','Ernie Gregerson','ernie@domain_test.com','54','2','1','0','-','1','2013-08-01','2013-08-01'),
+(13,'Stewart','Nickelson','Stewart Nickelson','stewart@domain_test.com','53','3','1','0','-','1','2013-08-01','2013-08-01'),
+(14,'Stefano','Durand','Stefano Durand','stefano@domain_test.com','50','1','1','0','-','1','2013-08-01','2013-08-01');
+/*!40000 ALTER TABLE `userdata` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usergroup`
+--
+
+DROP TABLE IF EXISTS `usergroup`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usergroup` (
+  `IdRecipient` int(11) NOT NULL AUTO_INCREMENT,
+  `IdGroup` int(11) NOT NULL,
+  `InsertDate` varchar(100) NOT NULL,
+  `UpdateDate` varchar(100) NOT NULL,
+  PRIMARY KEY (`IdRecipient`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usergroup`
+--
+
+LOCK TABLES `usergroup` WRITE;
+/*!40000 ALTER TABLE `usergroup` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usergroup` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2013-10-29 14:34:37
