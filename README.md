@@ -1,4 +1,4 @@
-Simple SMTP+ Implementation samples ( work in progress )
+Simple SMTP+ Implementation samples
 ------------------------
 A very short list of readymade SMTP+ implementation samples.
 The samples contained in this repository are based on easy-to-handle scenarios and suggest some possible implementation approaches.
